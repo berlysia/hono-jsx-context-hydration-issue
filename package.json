@@ -3,10 +3,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "rm -r dist && vite build --mode client && vite build",
+    "build": "rm -rf dist && vite build --mode client && vite build",
     "preview": "wrangler pages dev",
     "serve": "$npm_execpath run build && serve dist",
-    "deploy": "$npm_execpath run build && gh-pages -d dist --nojekyll"
+    "build:gh-pages": "VITE_BASE_PATH='/hono-jsx-context-hydration-issue/' $npm_execpath run build",
+    "gh-pages": "gh-pages -d dist --nojekyll",
+    "deploy": "$npm_execpath run build:gh-pages && $npm_execpath run gh-pages"
   },
   "private": true,
   "dependencies": {

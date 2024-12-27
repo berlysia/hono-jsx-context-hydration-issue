@@ -5,10 +5,13 @@ import client from "honox/vite/client";
 
 const entry = "./app/server.ts";
 
+const base = process.env.VITE_BASE_PATH ?? "/";
+console.log("base", base);
+
 export default defineConfig(({ mode }) => {
   if (mode === "client") {
     return {
-      base: "",
+      base,
       plugins: [client()],
     };
   }
@@ -16,7 +19,7 @@ export default defineConfig(({ mode }) => {
     build: {
       emptyOutDir: false,
     },
-    base: "",
+    base,
     plugins: [honox(), ssgBuild({ entry }), client()],
   };
 });
