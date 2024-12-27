@@ -8,6 +8,7 @@ const entry = "./app/server.ts";
 export default defineConfig(({ mode }) => {
   if (mode === "client") {
     return {
+      base: "",
       plugins: [client()],
     };
   }
@@ -15,6 +16,7 @@ export default defineConfig(({ mode }) => {
     build: {
       emptyOutDir: false,
     },
+    base: "",
     plugins: [honox(), ssgBuild({ entry }), client()],
   };
 });
