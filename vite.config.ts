@@ -6,6 +6,11 @@ import client from "honox/vite/client";
 const entry = "./app/server.ts";
 
 export default defineConfig(({ mode }) => {
+  if (mode === "client") {
+    return {
+      plugins: [client()],
+    };
+  }
   return {
     build: {
       emptyOutDir: false,

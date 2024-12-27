@@ -3,10 +3,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "rm -r dist && vite build --mode client && vite build",
     "preview": "wrangler pages dev",
-    "serve": "vite build && serve dist",
-    "deploy": "vite build && gh-pages -d dist --nojekyll"
+    "serve": "$npm_execpath run build && serve dist",
+    "deploy": "$npm_execpath run build && gh-pages -d dist --nojekyll"
   },
   "private": true,
   "dependencies": {
