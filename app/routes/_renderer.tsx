@@ -12,7 +12,17 @@ export default jsxRenderer(({ children, title }) => {
         <Script src="/app/client.ts" async />
         <Style />
       </head>
-      <body>{children}</body>
+      <body>
+        <aside>
+          <a
+            href="https://github.com/berlysia/hono-jsx-context-hydration-issue"
+            target="_blank"
+          >
+            source code
+          </a>
+        </aside>
+        <div>{children}</div>
+      </body>
     </html>
   );
 });
