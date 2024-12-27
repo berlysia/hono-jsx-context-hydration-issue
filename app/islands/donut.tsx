@@ -1,5 +1,5 @@
 import { PropsWithChildren, useContext, useId, useState } from "hono/jsx";
-import MyContext from "../my-context";
+import MyContext from "../context";
 
 export default function Donut({ children }: PropsWithChildren) {
   const id = useId();

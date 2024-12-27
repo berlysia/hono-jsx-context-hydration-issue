@@ -1,5 +1,5 @@
 import { useContext } from "hono/jsx";
-import MyContext from "../my-context";
+import MyContext from "../context";
 
 export default function ViewOnly() {
   const [state] = useContext(MyContext);

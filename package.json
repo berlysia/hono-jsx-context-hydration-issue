@@ -3,9 +3,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --mode client && vite build",
+    "build": "vite build",
     "preview": "wrangler pages dev",
-    "deploy": "bun run build && wrangler pages deploy"
+    "deploy": "vite build && wrangler pages deploy",
+    "serve": "vite build && serve dist"
   },
   "private": true,
   "dependencies": {
@@ -16,7 +17,9 @@
     "@cloudflare/workers-types": "^4.20241218.0",
     "@hono/vite-build": "^1.2.0",
     "@hono/vite-dev-server": "^0.17.0",
+    "@hono/vite-ssg": "^0.1.0",
     "prettier": "^3.4.2",
+    "serve": "^14.2.4",
     "vite": "^5.2.12",
     "wrangler": "^3.96.0"
   }

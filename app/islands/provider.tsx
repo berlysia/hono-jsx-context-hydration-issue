@@ -1,5 +1,5 @@
 import { PropsWithChildren, useId, useState } from "hono/jsx";
-import MyContext from "../my-context";
+import MyContext from "../context";
 
 export default function Provider({ children }: PropsWithChildren) {
   const [contextCount, setContextCount] = useState(0);

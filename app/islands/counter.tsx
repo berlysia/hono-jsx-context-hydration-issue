@@ -1,5 +1,5 @@
 import { useContext, useEffect, useId, useReducer, useState } from "hono/jsx";
-import MyContext from "../my-context";
+import MyContext from "../context";
 import ViewOnly from "./viewonly";
 
 export default function Counter() {
