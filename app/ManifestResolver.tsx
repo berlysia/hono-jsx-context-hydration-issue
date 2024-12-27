@@ -34,7 +34,7 @@ export default function ManifestResolver({
   const scriptSrc = resolvedSrc ? `${BASE}${resolvedSrc}` : src;
 
   if (type === "script") {
-    return <script src={scriptSrc} async={async} nonce={nonce} />;
+    return <script src={scriptSrc} type="module" async={async} nonce={nonce} />;
   }
   return <link rel="stylesheet" href={scriptSrc} />;
 }
