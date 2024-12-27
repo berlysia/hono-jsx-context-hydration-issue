@@ -5,8 +5,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "wrangler pages dev",
-    "deploy": "vite build && wrangler pages deploy",
-    "serve": "vite build && serve dist"
+    "serve": "vite build && serve dist",
+    "deploy": "vite build && gh-pages -d dist --nojekyll"
   },
   "private": true,
   "dependencies": {
@@ -18,6 +18,7 @@
     "@hono/vite-build": "^1.2.0",
     "@hono/vite-dev-server": "^0.17.0",
     "@hono/vite-ssg": "^0.1.0",
+    "gh-pages": "^6.2.0",
     "prettier": "^3.4.2",
     "serve": "^14.2.4",
     "vite": "^5.2.12",
